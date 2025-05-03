@@ -1,0 +1,153 @@
+
+/* Importation de la police Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #fafafe, #3a3a3a);
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* ---- HEADER ---- */
+header {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #cce5ff;
+}
+/* CALENDRIER AMÉLIORÉ */
+.calendar-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    background: #f5f5f5;
+}
+
+.day {
+    overflow: auto; /* Permet le défilement si le contenu est trop long */
+    height: 100px; 
+}
+
+.day:hover {
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.event-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #007bff;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+.event-list {
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.event-list li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#eventDetails {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    display: none;
+}
+
+#eventImage {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.month-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#currentMonth {
+    margin: 0 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 5px 15px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.arrow:hover {
+    background: #e0e0e0;
+}
+
+.today {
+    background-color: #e6f7ff;
+    border: 1px solid #007bff;
+}

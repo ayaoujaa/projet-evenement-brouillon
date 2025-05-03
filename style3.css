@@ -1,0 +1,93 @@
+/* Importation de la police Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #fafafe, #3a3a3a);
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* ---- HEADER ---- */
+header {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optionnel : ajout d'une ombre pour un effet plus marqué */
+}
+
+/* Bande sous le header */
+header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #3a3a3a;  /* Couleur de la bande */
+    position: absolute;
+    bottom: -5px;  /* Positionner la bande sous le header */
+    left: 0;
+}
+
+/* Style du titre du header */
+header h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* ---- NAVIGATION ---- */
+nav {
+    background-color: #ffffff; /* Fond blanc pour le menu */
+    padding: 10px 0;  /* Padding autour du menu */
+    text-align: center; /* Centrer les liens */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optionnel : ombre sous le menu */
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s;
+    padding: 5px 10px; /* Espacement autour des liens */
+    border-radius: 5px; /* Bords arrondis pour un effet plus doux */
+}
+
+nav a:hover {
+    color: #cce5ff;
+    background-color: #333; /* Ajoute une couleur de fond au survol */
+}
+
+/* Bande sous le menu */
+nav::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #3a3a3a; /* Couleur de la bande sous le menu */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* ---- CALENDAR ---- */
+.calendar { display: inline-block; text-align: left; }
+.month-navigation { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.arrow { cursor: pointer; font-size: 20px; }
+.month { text-align: center; font-size: 24px; margin: 10px 0; }
+.days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; }
+.day { width: 50px; height: 50px; line-height: 50px; text-align: center; border: 1px solid #ccc; cursor: pointer; position: relative; }
+.day.header { font-weight: bold; background: #eee; cursor: default; }
+.conference { background-color: #f4a261; font-weight: bold; }
+.day img { width: 20px; height: 20px; position: absolute; bottom: 5px; right: 5px; }
+#conferenceDetails { display: none; margin-top: 20px; text-align: left; border: 1px solid #ccc; padding: 10px; width: 300px; margin-left: auto; margin-right: auto; }
+#conferenceDetails img { width: 100%; height: auto; }
